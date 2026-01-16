@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.Web/serverfarms",
+      "apiVersion": "2022-03-01",
+      "name": "pbArmAppServicePlan",
+      "location": "chilecentral",
+      "sku": { "name": "F1", "capacity": 1 },
+      "properties": { "name": "pbArmAppServicePlan" }
+    },
+    {
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2022-03-01",
+      "name": "pbArmWebAppDemo",
+      "location": "chilecentral",  
+      "properties": {
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'pbArmAppServicePlan')]"
+      }
+    }
+  ]
+}
