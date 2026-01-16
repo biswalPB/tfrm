@@ -1,6 +1,6 @@
 param location string = 'chilecentral'
-param appServicePlanName string = 'pb1bicepAppServicePlan-cli'
-param webAppName string = 'pb1bicepWebAppDemo-cli'
+param appServicePlanName string = 'pb1bicepAppServicePlan-cli123'
+param webAppName string = 'pb1bicepWebAppDemo-cli123'
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
   name: appServicePlanName   // Reference the appServicePlanName parameter

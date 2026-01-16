@@ -14,7 +14,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2022-03-01",
       "name": "pbArmWebAppDemo",
-      "location": "chilecentral",  
+      "location": "chilecentral", 
       "properties": {
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'pbArmAppServicePlan')]"
       }
